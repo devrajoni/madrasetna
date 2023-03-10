@@ -15,12 +15,16 @@ class ContactController extends Controller
             'name' => 'required',
             'email' => 'required',
             'phone' => 'required',
+            'one' => 'required',
+            'two' => 'required',
         ]);
 
         $data = Contact::create([
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,
+            'one' => $request->one,
+            'two' => $request->two,
         ]);
 
         try {
